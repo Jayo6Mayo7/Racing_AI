@@ -449,7 +449,7 @@ class GamePanel : JPanel(), KeyListener {
         isFocusable = true
         addKeyListener(this)
 
-        Timer(0) {
+        Timer(16) {
 
             if (!playerMoving) {
                 repeat(simSpeed) {
