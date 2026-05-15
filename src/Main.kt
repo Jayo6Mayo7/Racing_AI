@@ -267,6 +267,7 @@ open class RaceCar(var x: Double, var y: Double, val brain: NeuralNetwork = Neur
         if (right) angle += STEER_SPEED * turnModifier
 
         speed *= FRICTION
+        if (!playerMoving) speed *= 1.3
 
         x += cos(angle) * (speed)
         y += sin(angle) * (speed)
